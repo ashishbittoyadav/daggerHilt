@@ -41,6 +41,7 @@ class TestViewModel @Inject constructor(
 ):ViewModel(){
 
     init {
+
         Log.d(TAG, "hilt string:-> $string ----- ${testViewModelRepository.testString()}")
     }
 
