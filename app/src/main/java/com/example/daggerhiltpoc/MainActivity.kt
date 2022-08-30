@@ -3,9 +3,11 @@ package com.example.daggerhiltpoc
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.lifecycle.ViewModel
 import com.example.daggerhiltpoc.MainActivity.Companion.TAG
+import com.example.daggerhiltpoc.util.Status
 import dagger.assisted.AssistedInject
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -19,34 +21,22 @@ class MainActivity : AppCompatActivity() {
         val TAG = "MainActivity.TAG"
     }
 
-    @Inject
-    @Named("hiltString")
-    lateinit var daggerString: String
-
-    private val viewModel: TestViewModel by viewModels()
+    private val viewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        Log.d(TAG, "onCreate: $daggerString")
-        viewModel
+        val textView = findViewById<TextView>(R.id.output_text_view)
+        viewModel.res.observe(this){
+            runOnUiThread {
+                if(it.status == Status.SUCCESS){
+                    textView.text = it.data!![0].email
+                }else if(it.status == Status.ERROR){
+                    textView.text = it.message
+                }else{
+                    textView.text = "loading..."
+                }
+            }
+        }
     }
-}
-
-@HiltViewModel
-class TestViewModel @Inject constructor(
-    @Named("hiltString") string: String,
-    private val testViewModelRepository: TestViewModelRepository
-):ViewModel(){
-
-    init {
-
-        Log.d(TAG, "hilt string:-> $string ----- ${testViewModelRepository.testString()}")
-    }
-
-}
-
-class TestViewModelRepository(){
-    fun testString() = "this string is for testing the repository inject via hilt..."
 }
