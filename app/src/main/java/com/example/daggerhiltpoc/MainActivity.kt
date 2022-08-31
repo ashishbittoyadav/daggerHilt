@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
     companion object{
         val TAG = "MainActivity.TAG"
     }
-
     private val viewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
