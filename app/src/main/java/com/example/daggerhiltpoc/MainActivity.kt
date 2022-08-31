@@ -1,18 +1,16 @@
 package com.example.daggerhiltpoc
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.TextView
 import androidx.activity.viewModels
-import androidx.lifecycle.ViewModel
-import com.example.daggerhiltpoc.MainActivity.Companion.TAG
+import androidx.appcompat.app.AppCompatActivity
 import com.example.daggerhiltpoc.util.Status
-import dagger.assisted.AssistedInject
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.lifecycle.HiltViewModel
-import javax.inject.Inject
-import javax.inject.Named
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -27,12 +25,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val textView = findViewById<TextView>(R.id.output_text_view)
-        viewModel.res.observe(this){
+        viewModel.res.observe(this){ response ->
+            CoroutineScope(IO).launch {
+                withContext(Dispatchers.Default) {
+                    response.data?.forEach {
+                        viewModel.saveUserInDB(it)
+                    }
+                }
+            }
             runOnUiThread {
-                if(it.status == Status.SUCCESS){
-                    textView.text = it.data!![0].email
-                }else if(it.status == Status.ERROR){
-                    textView.text = it.message
+                if(response.status == Status.SUCCESS){
+                    textView.text = response.data!![0].email
+                }else if(response.status == Status.ERROR){
+                    textView.text = response.message
                 }else{
                     textView.text = "loading..."
                 }

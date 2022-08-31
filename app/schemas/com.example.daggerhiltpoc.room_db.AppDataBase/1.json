@@ -1,0 +1,118 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "d0bb5192ec969f29395ff467619a550b",
+    "entities": [
+      {
+        "tableName": "UsersItem",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`email` TEXT NOT NULL, `id` INTEGER NOT NULL, `name` TEXT NOT NULL, `phone` TEXT NOT NULL, `username` TEXT NOT NULL, `website` TEXT NOT NULL, `city` TEXT NOT NULL, `street` TEXT NOT NULL, `suite` TEXT NOT NULL, `zipcode` TEXT NOT NULL, `lat` TEXT NOT NULL, `lng` TEXT NOT NULL, `bs` TEXT, `catchPhrase` TEXT, `companyName` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "phone",
+            "columnName": "phone",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "username",
+            "columnName": "username",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "website",
+            "columnName": "website",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "address.city",
+            "columnName": "city",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "address.street",
+            "columnName": "street",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "address.suite",
+            "columnName": "suite",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "address.zipcode",
+            "columnName": "zipcode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "address.geo.lat",
+            "columnName": "lat",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "address.geo.lng",
+            "columnName": "lng",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "company.bs",
+            "columnName": "bs",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "company.catchPhrase",
+            "columnName": "catchPhrase",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "company.companyName",
+            "columnName": "companyName",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd0bb5192ec969f29395ff467619a550b')"
+    ]
+  }
+}
