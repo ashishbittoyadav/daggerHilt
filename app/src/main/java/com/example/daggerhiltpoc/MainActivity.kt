@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                 }else if(response.status == Status.ERROR){
                     textView.text = response.message
                 }else{
-                    textView.text = "loading..."
+                    textView.text = "loading please wait..."
                 }
             }
         }
