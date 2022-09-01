@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DaggerHiltPOC</string>
+    <string name="loading_message">loading please wait...</string>
 </resources>
