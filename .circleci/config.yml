@@ -13,7 +13,11 @@ jobs:
     executor: android/android
     steps:
       - checkout
-      - run:
-          name: "build project"
-          command:
-            ./gradlew build
+      - when:
+          condition:
+            equal: [develop]
+          steps:
+            - run:
+                name: "build project"
+                command:
+                  ./gradlew build
