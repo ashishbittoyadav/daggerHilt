@@ -13,4 +13,6 @@ class MainRepository @Inject constructor(private val apiHelper: ApiHelper,privat
         userDao.insertUser(usersItem)
     }
 
+    suspend fun getUsersFromDB() = userDao.getUsers()
+
 }
