@@ -9,7 +9,7 @@ jobs:
     filters:
       branches:
         only:
-          -master
+          -develop
     executor: android/android
     steps:
       - checkout
