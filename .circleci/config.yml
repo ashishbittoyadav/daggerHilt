@@ -1,0 +1,19 @@
+version: 2.1
+
+
+orbs:
+  android: circleci/android@0.2.0
+#  aws-cli: circleci/aws-cli@3.1.1
+jobs:
+  build:
+    filters:
+      branches:
+        only:
+          -master
+    executor: android/android
+    steps:
+      - checkout
+      - run:
+          name: "build project"
+          command:
+            ./gradlew build
