@@ -33,12 +33,16 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             runOnUiThread {
-                if(response.status == Status.SUCCESS){
-                    textView.text = response.data!![0].email
-                }else if(response.status == Status.ERROR){
-                    textView.text = response.message
-                }else{
-                    textView.text = "loading..."
+                when (response.status) {
+                    Status.SUCCESS -> {
+                        textView.text = response.data!![0].email
+                    }
+                    Status.ERROR -> {
+                        textView.text = response.message
+                    }
+                    else -> {
+                        textView.text = getString(R.string.loading_message)
+                    }
                 }
             }
         }
