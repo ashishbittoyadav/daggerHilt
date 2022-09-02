@@ -20,4 +20,13 @@ jobs:
             - run:
                 name: "build project"
                 command:
-                  ./gradlew build
+                  echo "hello world"
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: develop
+#              ./gradlew build
