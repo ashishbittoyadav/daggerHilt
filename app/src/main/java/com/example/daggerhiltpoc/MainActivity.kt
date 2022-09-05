@@ -13,8 +13,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.ashish.versioning.Versioning
-//import com.ashish.versioning.Versioning
 import com.example.daggerhiltpoc.adapter.ItemUserAdapter
 import com.example.daggerhiltpoc.adapter.OnItemUserAdapterListener
 import com.example.daggerhiltpoc.databinding.ActivityMainBinding
@@ -46,13 +44,13 @@ class MainActivity : AppCompatActivity() {
         binding.executePendingBindings()
 
         viewModel.getUserFromRepo()
-        Log.d(TAG, "onCreate: ${Versioning().version()}")
+//        Log.d(TAG, "onCreate: ${Versioning().version()}")
         lifecycleScope.launch{
             repeatOnLifecycle(Lifecycle.State.STARTED){
                 viewModel.resStateFlow.collect{ uiState ->
                     when(uiState){
                         is ResourceUiState.Success -> {
-                            val userAdapter = ItemUserAdapter(this@MainActivity,this@MainActivity,uiState.users,object : OnItemUserAdapterListener{
+                            val userAdapter = ItemUserAdapter(context =this@MainActivity, lifecycleOwner = this@MainActivity, userList = uiState.users, onItemUserAdapterListener = object : OnItemUserAdapterListener{
                                 override fun onItemClicked(usersItem: UsersItem) {
                                     if (BuildConfig.FLAVOR == "internal")
                                         Toast.makeText(this@MainActivity,"internal version",Toast.LENGTH_SHORT).show()
