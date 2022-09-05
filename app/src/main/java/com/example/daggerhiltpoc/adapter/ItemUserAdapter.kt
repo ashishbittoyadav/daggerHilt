@@ -6,13 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
 import com.example.daggerhiltpoc.R
 import com.example.daggerhiltpoc.databinding.ItemUserDetailBinding
 import com.example.daggerhiltpoc.model.UsersItem
 
-class ItemUserAdapter(private val context: Context,private val lifecycleOwner: LifecycleOwner,private val userList: List<UsersItem>) : RecyclerView.Adapter<ItemUserAdapter.ItemUserViewHolder>() {
+class ItemUserAdapter(private val context: Context,private val lifecycleOwner: LifecycleOwner,private val userList: List<UsersItem>,private val onItemUserAdapterListener: OnItemUserAdapterListener) : RecyclerView.Adapter<ItemUserAdapter.ItemUserViewHolder>() {
 
     private val TAG = "ItemUserAdapter.TAG"
 
@@ -34,6 +35,9 @@ class ItemUserAdapter(private val context: Context,private val lifecycleOwner: L
 
         fun bind(usersItem: UsersItem) {
             inflate.userData = usersItem
+            inflate.clickListener = View.OnClickListener {
+                onItemUserAdapterListener.onItemClicked(usersItem)
+            }
             inflate.lifecycleOwner = lifecycleOwner
             inflate.executePendingBindings()
 
@@ -41,4 +45,8 @@ class ItemUserAdapter(private val context: Context,private val lifecycleOwner: L
         }
 
     }
+}
+
+interface OnItemUserAdapterListener{
+    fun onItemClicked(usersItem: UsersItem)
 }

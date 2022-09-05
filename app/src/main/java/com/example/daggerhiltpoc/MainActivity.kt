@@ -1,5 +1,7 @@
 package com.example.daggerhiltpoc
 
+import android.location.Address
+import android.location.Geocoder
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -11,14 +13,18 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ashish.versioning.Versioning
+//import com.ashish.versioning.Versioning
 import com.example.daggerhiltpoc.adapter.ItemUserAdapter
+import com.example.daggerhiltpoc.adapter.OnItemUserAdapterListener
 import com.example.daggerhiltpoc.databinding.ActivityMainBinding
 import com.example.daggerhiltpoc.model.UsersItem
 import com.example.daggerhiltpoc.util.ResourceUiState
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.launch
+import java.util.*
+import kotlin.collections.ArrayList
+
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -40,18 +46,22 @@ class MainActivity : AppCompatActivity() {
         binding.executePendingBindings()
 
         viewModel.getUserFromRepo()
-
+        Log.d(TAG, "onCreate: ${Versioning().version()}")
         lifecycleScope.launch{
             repeatOnLifecycle(Lifecycle.State.STARTED){
                 viewModel.resStateFlow.collect{ uiState ->
                     when(uiState){
                         is ResourceUiState.Success -> {
-                            val userAdapter = ItemUserAdapter(this@MainActivity,this@MainActivity,uiState.users)
+                            val userAdapter = ItemUserAdapter(this@MainActivity,this@MainActivity,uiState.users,object : OnItemUserAdapterListener{
+                                override fun onItemClicked(usersItem: UsersItem) {
+                                    if (BuildConfig.FLAVOR == "internal")
+                                        Toast.makeText(this@MainActivity,"internal version",Toast.LENGTH_SHORT).show()
+                                    else
+                                        Toast.makeText(this@MainActivity,"external version",Toast.LENGTH_SHORT).show()
+                                }
+                            })
                             binding.activityMainUserItemRecyclerView.layoutManager = LinearLayoutManager(this@MainActivity,RecyclerView.VERTICAL,false)
                             binding.activityMainUserItemRecyclerView.adapter = userAdapter
-                            uiState.users.forEach {
-                                Log.d(TAG, "onCreate: ${it.name}")
-                            }
                         }
                         is ResourceUiState.Failed -> {
                             Log.d(TAG, "onCreate: ${uiState.errorMsg}")
