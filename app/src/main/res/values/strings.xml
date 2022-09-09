@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">DaggerHiltPOC</string>
     <string name="loading_message">loading please wait...</string>
+    <string name="title_dynamicfeature">dynamicModule</string>
 </resources>

@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.11458333333333333" />
         <entry key="app/src/main/res/layout/item_user_detail.xml" value="0.18385416666666668" />
+        <entry key="app/src/main/res/xml/config_accessibility_service.xml" value="0.18489583333333334" />
       </map>
     </option>
   </component>

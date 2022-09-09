@@ -1,7 +1,9 @@
 package com.example.daggerhiltpoc
 
-import android.location.Address
-import android.location.Geocoder
+//import com.ashish.versioning.Versioning
+
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -18,10 +20,14 @@ import com.example.daggerhiltpoc.adapter.OnItemUserAdapterListener
 import com.example.daggerhiltpoc.databinding.ActivityMainBinding
 import com.example.daggerhiltpoc.model.UsersItem
 import com.example.daggerhiltpoc.util.ResourceUiState
+import com.google.android.play.core.splitinstall.SplitInstallManagerFactory
+import com.google.android.play.core.splitinstall.SplitInstallRequest
+import com.google.android.play.core.splitinstall.SplitInstallStateUpdatedListener
+import com.google.android.play.core.splitinstall.model.SplitInstallSessionStatus
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import java.util.*
-import kotlin.collections.ArrayList
+import kotlin.reflect.full.declaredMemberFunctions
+import kotlin.reflect.full.primaryConstructor
 
 
 @AndroidEntryPoint
@@ -38,13 +44,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_main)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         binding.lifecycleOwner = this
         binding.executePendingBindings()
-
+        val number = "919720547422"
+        installDynamicFeatureModule("dynamicfeature")
         viewModel.getUserFromRepo()
-//        Log.d(TAG, "onCreate: ${Versioning().version()}")
         lifecycleScope.launch{
             repeatOnLifecycle(Lifecycle.State.STARTED){
                 viewModel.resStateFlow.collect{ uiState ->
@@ -52,10 +57,7 @@ class MainActivity : AppCompatActivity() {
                         is ResourceUiState.Success -> {
                             val userAdapter = ItemUserAdapter(context =this@MainActivity, lifecycleOwner = this@MainActivity, userList = uiState.users, onItemUserAdapterListener = object : OnItemUserAdapterListener{
                                 override fun onItemClicked(usersItem: UsersItem) {
-                                    if (BuildConfig.FLAVOR == "internal")
-                                        Toast.makeText(this@MainActivity,"internal version",Toast.LENGTH_SHORT).show()
-                                    else
-                                        Toast.makeText(this@MainActivity,"external version",Toast.LENGTH_SHORT).show()
+                                    callMethodViaReflection("com.example.dynamicfeature.NonActivityClass","randomPrint")
                                 }
                             })
                             binding.activityMainUserItemRecyclerView.layoutManager = LinearLayoutManager(this@MainActivity,RecyclerView.VERTICAL,false)
@@ -71,5 +73,72 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    private fun installDynamicFeatureModule(moduleName:String) {
+        var mySessionId = 0
+        val splitInstallManager = SplitInstallManagerFactory.create(this)
+        val request = SplitInstallRequest
+            .newBuilder()
+            .addModule(moduleName)
+            .build()
+        val listener =
+            SplitInstallStateUpdatedListener { splitInstallSessionState ->
+                if (splitInstallSessionState.sessionId() == mySessionId) {
+                    when (splitInstallSessionState.status()) {
+                        SplitInstallSessionStatus.INSTALLED -> {
+                            Log.d(TAG, "Dynamic Module downloaded ")
+                            Toast.makeText(
+                                this@MainActivity,
+                                "Dynamic Module downloaded",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                        SplitInstallSessionStatus.CANCELED -> {
+
+                        }
+                        SplitInstallSessionStatus.CANCELING -> {
+
+                        }
+                        SplitInstallSessionStatus.DOWNLOADED -> {
+
+                        }
+                        SplitInstallSessionStatus.DOWNLOADING -> {
+
+                        }
+                        SplitInstallSessionStatus.FAILED -> {
+
+                        }
+                        SplitInstallSessionStatus.INSTALLING -> {
+
+                        }
+                        SplitInstallSessionStatus.PENDING -> {
+
+                        }
+                        SplitInstallSessionStatus.REQUIRES_USER_CONFIRMATION -> {
+
+                        }
+                        SplitInstallSessionStatus.UNKNOWN -> {
+
+                        }
+                    }
+                }
+            }
+
+        splitInstallManager.registerListener(listener)
+
+        splitInstallManager.startInstall(request)
+            .addOnFailureListener { e -> Log.d(TAG, "Exception: $e") }
+            .addOnSuccessListener { sessionId -> mySessionId = sessionId }
+    }
+
+    private fun callMethodViaReflection(fullyQualifiedMethodName:String,methodName:String){
+        val className = Class.forName(fullyQualifiedMethodName).kotlin
+        val method = className.members.find {
+            (it.name == methodName)
+        }
+        val obj = className.primaryConstructor?.call()
+        method?.call(obj)
+        Log.d(TAG, "onItemClicked: ${method?.call(obj)}")
     }
 }
