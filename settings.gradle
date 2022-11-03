@@ -17,7 +17,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "DaggerHiltPOC"
 include ':app'
-include ':versioning'
-include ':dynamicfeature'
-include ':SpandanSdk'
-include ':usbserial'

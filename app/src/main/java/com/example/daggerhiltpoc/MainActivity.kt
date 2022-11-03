@@ -2,8 +2,6 @@ package com.example.daggerhiltpoc
 
 //import com.ashish.versioning.Versioning
 
-import `in`.sunfox.spandanecg.spandansdk.connection.OnDeviceConnectionStateChangeListener
-import `in`.sunfox.spandanecg.spandansdk.enums.DeviceConnectionState
 import android.os.Bundle
 import android.os.Environment
 import android.util.Log
@@ -55,21 +53,7 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.lifecycleOwner = this
         binding.executePendingBindings()
-        val number = "919720547422"
 
-
-//        val sdk = SpandanSdk.getInstance()
-//        sdk.bind(this)
-//        sdk.setOnDeviceConnectionStateChangedListener(object : OnDeviceConnectionStateChangeListener{
-//            override fun onDeviceConnectionStateChanged(deviceConnectionState: DeviceConnectionState) {
-//
-//            }
-//
-//        })
-
-        val fileName = "encrypted_file.txt"
-
-        installDynamicFeatureModule("dynamicfeature")
         viewModel.getUserFromRepo()
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -82,10 +66,7 @@ class MainActivity : AppCompatActivity() {
                                 userList = uiState.users,
                                 onItemUserAdapterListener = object : OnItemUserAdapterListener {
                                     override fun onItemClicked(usersItem: UsersItem) {
-                                        callMethodViaReflection(
-                                            "com.example.dynamicfeature.NonActivityClass",
-                                            "randomPrint"
-                                        )
+                                        Toast.makeText(this@MainActivity,usersItem.name,Toast.LENGTH_SHORT).show()
                                     }
                                 })
                             binding.activityMainUserItemRecyclerView.layoutManager =
@@ -101,126 +82,6 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-        }
-    }
-
-    private fun installDynamicFeatureModule(moduleName: String) {
-        var mySessionId = 0
-        val splitInstallManager = SplitInstallManagerFactory.create(this)
-        val request = SplitInstallRequest
-            .newBuilder()
-            .addModule(moduleName)
-            .build()
-        val listener =
-            SplitInstallStateUpdatedListener { splitInstallSessionState ->
-                if (splitInstallSessionState.sessionId() == mySessionId) {
-                    when (splitInstallSessionState.status()) {
-                        SplitInstallSessionStatus.INSTALLED -> {
-                            Log.d(TAG, "Dynamic Module downloaded ")
-                            Toast.makeText(
-                                this@MainActivity,
-                                "Dynamic Module downloaded",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
-                        SplitInstallSessionStatus.CANCELED -> {
-
-                        }
-                        SplitInstallSessionStatus.CANCELING -> {
-
-                        }
-                        SplitInstallSessionStatus.DOWNLOADED -> {
-
-                        }
-                        SplitInstallSessionStatus.DOWNLOADING -> {
-
-                        }
-                        SplitInstallSessionStatus.FAILED -> {
-
-                        }
-                        SplitInstallSessionStatus.INSTALLING -> {
-
-                        }
-                        SplitInstallSessionStatus.PENDING -> {
-
-                        }
-                        SplitInstallSessionStatus.REQUIRES_USER_CONFIRMATION -> {
-
-                        }
-                        SplitInstallSessionStatus.UNKNOWN -> {
-
-                        }
-                    }
-                }
-            }
-
-        splitInstallManager.registerListener(listener)
-
-        splitInstallManager.startInstall(request)
-            .addOnFailureListener { e -> Log.d(TAG, "Exception: $e") }
-            .addOnSuccessListener { sessionId -> mySessionId = sessionId }
-    }
-
-    private fun callMethodViaReflection(fullyQualifiedMethodName: String, methodName: String) {
-        val className = Class.forName(fullyQualifiedMethodName).kotlin
-        val method = className.members.find {
-            (it.name == methodName)
-        }
-        val obj = className.primaryConstructor?.call()
-        method?.call(obj)
-        Log.d(TAG, "onItemClicked: ${method?.call(obj)}")
-    }
-
-    fun readEncryptedFile(fileName: String) {
-        // Although you can define your own key generation parameter specification, it's
-        // recommended that you use the value specified here.
-        val keyGenParameterSpec = MasterKeys.AES256_GCM_SPEC
-        val mainKeyAlias = MasterKeys.getOrCreate(keyGenParameterSpec)
-
-        val encryptedFile = EncryptedFile.Builder(
-            File(Environment.DIRECTORY_DOCUMENTS, fileName),
-            applicationContext,
-            mainKeyAlias,
-            EncryptedFile.FileEncryptionScheme.AES256_GCM_HKDF_4KB
-        ).build()
-
-        val inputStream = encryptedFile.openFileInput()
-        val byteArrayOutputStream = ByteArrayOutputStream()
-        var nextByte: Int = inputStream.read()
-        while (nextByte != -1) {
-            byteArrayOutputStream.write(nextByte)
-            nextByte = inputStream.read()
-        }
-        val plaintext: ByteArray = byteArrayOutputStream.toByteArray()
-    }
-
-
-    private fun writeEncryptedDataToFile(fileName: String){
-        val keyGenParameterSpec = MasterKeys.AES256_GCM_SPEC
-        val mainKeyAlias = MasterKeys.getOrCreate(keyGenParameterSpec)
-
-        // Create a file with this name, or replace an entire existing file
-// that has the same name. Note that you cannot append to an existing file,
-// and the file name cannot contain path separators.
-
-//        val osw = OutputStreamWriter(openFileOutput(fileName, MODE_APPEND))
-//        osw.write("as")
-//        osw.flush()
-//        osw.close()
-        val file = File(Environment.getExternalStorageDirectory(),fileName)
-//        if(!file.exists())
-//            file.createNewFile()
-        val encryptedFile = EncryptedFile.Builder(
-            file,
-            applicationContext,
-            mainKeyAlias,
-            EncryptedFile.FileEncryptionScheme.AES256_GCM_HKDF_4KB
-        ).build()
-        val fileContent = "MY SUPER-SECRET INFORMATION".toByteArray(StandardCharsets.UTF_8)
-        encryptedFile.openFileOutput().apply {
-            write(fileContent)
-            flush()
-            close()
         }
     }
 }
