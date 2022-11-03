@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "in.sunfox.spandanecg.spandansdk.SpandanSdk-merged_res-30:/layout-v21/notification_template_custom_big.xml",
+        "source": "in.sunfox.spandanecg.spandansdk.SpandanSdk-core-1.8.0-14:/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "in.sunfox.spandanecg.spandansdk.SpandanSdk-merged_res-30:/layout-v21/notification_action_tombstone.xml",
+        "source": "in.sunfox.spandanecg.spandansdk.SpandanSdk-core-1.8.0-14:/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "in.sunfox.spandanecg.spandansdk.SpandanSdk-merged_res-30:/layout-v21/notification_template_icon_group.xml",
+        "source": "in.sunfox.spandanecg.spandansdk.SpandanSdk-core-1.8.0-14:/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "in.sunfox.spandanecg.spandansdk.SpandanSdk-merged_res-30:/layout-v21/notification_action.xml",
+        "source": "in.sunfox.spandanecg.spandansdk.SpandanSdk-core-1.8.0-14:/layout-v21/notification_action.xml"
+    }
+]

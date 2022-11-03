@@ -1,0 +1,583 @@
+# compiler: R8
+# compiler_version: 3.2.60
+# common_typos_disable
+# {"id":"com.android.tools.r8.mapping","version":"2.0"}
+# pg_map_id: 2cf6510
+# pg_map_hash: SHA-256 2cf6510b250ade326fb0a39ea39bb7fe9d5f81cdbd24e8fd3924594d10355192
+androidx.databinding.library.baseAdapters.BR -> androidx.databinding.library.baseAdapters.BR:
+    1:1:void <init>():3:3 -> <init>
+in.sunfox.spandanecg.spandansdk.BR -> in.sunfox.spandanecg.spandansdk.BR:
+    1:1:void <init>():3:3 -> <init>
+in.sunfox.spandanecg.spandansdk.BuildConfig -> in.sunfox.spandanecg.spandansdk.BuildConfig:
+    1:1:void <init>():6:6 -> <init>
+in.sunfox.spandanecg.spandansdk.Characteristics -> in.sunfox.spandanecg.spandansdk.Characteristics:
+# {"id":"sourceFile","fileName":"Characteristics.kt"}
+    double ventricularActivationLOR -> A
+    int heartRate -> f
+    double averageQAmplitudeInLead -> s
+    java.util.ArrayList pAmplitudeArrayInMv -> F
+    double averageTAmplitudeInLead -> u
+    int frequencyOfPatternInRR -> E
+    int qrs -> b
+    double pWidth -> w
+    java.util.ArrayList tWavePoints -> o
+    java.util.ArrayList qWavePoints -> m
+    java.util.ArrayList prStartIndices -> k
+    boolean qrsDirectionUpward -> y
+    java.util.ArrayList rrIntervals -> i
+    double qtc -> d
+    boolean TRRatioSatisfy -> G
+    java.util.ArrayList tWaveEndPoints -> q
+    boolean concavity -> C
+    double ratioRS -> z
+    double averagePAmplitudeInLead -> r
+    double averageSAmplitudeInLead -> t
+    int frequencyOfPatternInQRS -> D
+    int rr -> e
+    double averageRAmplitudeInLead -> v
+    int qt -> c
+    double tWidth -> x
+    int pr -> a
+    java.util.ArrayList sWavePoints -> n
+    java.util.ArrayList pWavePoints -> l
+    java.util.ArrayList prStopIndices -> j
+    java.util.ArrayList qrsIntervals -> h
+    double ventricularActivationROR -> B
+    boolean TSRatioSatisfy -> H
+    double stElevation -> g
+    java.util.ArrayList rPeakPoints -> p
+    1:38:void <init>(int,int,int,double,int,int,double,java.util.ArrayList,java.util.ArrayList,java.util.ArrayList,java.util.ArrayList,java.util.ArrayList,java.util.ArrayList,java.util.ArrayList,java.util.ArrayList,java.util.ArrayList,java.util.ArrayList,double,double,double,double,double,double,double,boolean,double,double,double,boolean,int,int,java.util.ArrayList,boolean,boolean):7:44 -> <init>
+    1:1:double getAveragePAmplitudeInLead():28:28 -> getAveragePAmplitudeInLead
+    1:1:double getAverageQAmplitudeInLead():29:29 -> getAverageQAmplitudeInLead
+    1:1:double getAverageRAmplitudeInLead():32:32 -> getAverageRAmplitudeInLead
+    1:1:double getAverageSAmplitudeInLead():30:30 -> getAverageSAmplitudeInLead
+    1:1:double getAverageTAmplitudeInLead():31:31 -> getAverageTAmplitudeInLead
+    1:1:boolean getConcavity():39:39 -> getConcavity
+    1:1:int getFrequencyOfPatternInQRS():40:40 -> getFrequencyOfPatternInQRS
+    1:1:int getFrequencyOfPatternInRR():41:41 -> getFrequencyOfPatternInRR
+    1:1:int getHeartRate():13:13 -> getHeartRate
+    1:1:java.util.ArrayList getPAmplitudeArrayInMv():42:42 -> getPAmplitudeArrayInMv
+    1:1:java.util.ArrayList getPWavePoints():19:19 -> getPWavePoints
+    1:1:double getPWidth():33:33 -> getPWidth
+    1:1:int getPr():8:8 -> getPr
+    1:1:java.util.ArrayList getPrStartIndices():18:18 -> getPrStartIndices
+    1:1:java.util.ArrayList getPrStopIndices():17:17 -> getPrStopIndices
+    1:1:java.util.ArrayList getQWavePoints():20:20 -> getQWavePoints
+    1:1:int getQrs():9:9 -> getQrs
+    1:1:boolean getQrsDirectionUpward():35:35 -> getQrsDirectionUpward
+    1:1:java.util.ArrayList getQrsIntervals():15:15 -> getQrsIntervals
+    1:1:int getQt():10:10 -> getQt
+    1:1:double getQtc():11:11 -> getQtc
+    1:1:java.util.ArrayList getRPeakPoints():23:23 -> getRPeakPoints
+    1:1:double getRatioRS():36:36 -> getRatioRS
+    1:1:int getRr():12:12 -> getRr
+    1:1:java.util.ArrayList getRrIntervals():16:16 -> getRrIntervals
+    1:1:java.util.ArrayList getSWavePoints():21:21 -> getSWavePoints
+    1:1:double getStElevation():14:14 -> getStElevation
+    1:1:boolean getTRRatioSatisfy():43:43 -> getTRRatioSatisfy
+    1:1:boolean getTSRatioSatisfy():44:44 -> getTSRatioSatisfy
+    1:1:java.util.ArrayList getTWaveEndPoints():24:24 -> getTWaveEndPoints
+    1:1:java.util.ArrayList getTWavePoints():22:22 -> getTWavePoints
+    1:1:double getTWidth():34:34 -> getTWidth
+    1:1:double getVentricularActivationLOR():37:37 -> getVentricularActivationLOR
+    1:1:double getVentricularActivationROR():38:38 -> getVentricularActivationROR
+    1:1:void setAveragePAmplitudeInLead(double):28:28 -> setAveragePAmplitudeInLead
+    1:1:void setAverageQAmplitudeInLead(double):29:29 -> setAverageQAmplitudeInLead
+    1:1:void setAverageRAmplitudeInLead(double):32:32 -> setAverageRAmplitudeInLead
+    1:1:void setAverageSAmplitudeInLead(double):30:30 -> setAverageSAmplitudeInLead
+    1:1:void setAverageTAmplitudeInLead(double):31:31 -> setAverageTAmplitudeInLead
+    1:1:void setConcavity(boolean):39:39 -> setConcavity
+    1:1:void setFrequencyOfPatternInQRS(int):40:40 -> setFrequencyOfPatternInQRS
+    1:1:void setFrequencyOfPatternInRR(int):41:41 -> setFrequencyOfPatternInRR
+    1:1:void setHeartRate(int):13:13 -> setHeartRate
+    1:1:void setPAmplitudeArrayInMv(java.util.ArrayList):42:42 -> setPAmplitudeArrayInMv
+    1:1:void setPWavePoints(java.util.ArrayList):19:19 -> setPWavePoints
+    1:1:void setPWidth(double):33:33 -> setPWidth
+    1:1:void setPr(int):8:8 -> setPr
+    1:1:void setPrStartIndices(java.util.ArrayList):18:18 -> setPrStartIndices
+    1:1:void setPrStopIndices(java.util.ArrayList):17:17 -> setPrStopIndices
+    1:1:void setQWavePoints(java.util.ArrayList):20:20 -> setQWavePoints
+    1:1:void setQrs(int):9:9 -> setQrs
+    1:1:void setQrsDirectionUpward(boolean):35:35 -> setQrsDirectionUpward
+    1:1:void setQrsIntervals(java.util.ArrayList):15:15 -> setQrsIntervals
+    1:1:void setQt(int):10:10 -> setQt
+    1:1:void setQtc(double):11:11 -> setQtc
+    1:1:void setRPeakPoints(java.util.ArrayList):23:23 -> setRPeakPoints
+    1:1:void setRatioRS(double):36:36 -> setRatioRS
+    1:1:void setRr(int):12:12 -> setRr
+    1:1:void setRrIntervals(java.util.ArrayList):16:16 -> setRrIntervals
+    1:1:void setSWavePoints(java.util.ArrayList):21:21 -> setSWavePoints
+    1:1:void setStElevation(double):14:14 -> setStElevation
+    1:1:void setTRRatioSatisfy(boolean):43:43 -> setTRRatioSatisfy
+    1:1:void setTSRatioSatisfy(boolean):44:44 -> setTSRatioSatisfy
+    1:1:void setTWaveEndPoints(java.util.ArrayList):24:24 -> setTWaveEndPoints
+    1:1:void setTWavePoints(java.util.ArrayList):22:22 -> setTWavePoints
+    1:1:void setTWidth(double):34:34 -> setTWidth
+    1:1:void setVentricularActivationLOR(double):37:37 -> setVentricularActivationLOR
+    1:1:void setVentricularActivationROR(double):38:38 -> setVentricularActivationROR
+    1:1:java.lang.String toString():52:52 -> toString
+in.sunfox.spandanecg.spandansdk.Conclusion -> in.sunfox.spandanecg.spandansdk.Conclusion:
+# {"id":"sourceFile","fileName":"Conclusion.kt"}
+    1:1:void <init>():5:5 -> <init>
+in.sunfox.spandanecg.spandansdk.Const -> in.sunfox.spandanecg.spandansdk.Const:
+# {"id":"sourceFile","fileName":"Const.kt"}
+    1:1:void <init>():3:3 -> <init>
+in.sunfox.spandanecg.spandansdk.DataBinderMapperImpl -> in.sunfox.spandanecg.spandansdk.DataBinderMapperImpl:
+    android.util.SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP -> a
+    1:1:void <clinit>():19:19 -> <clinit>
+    1:1:void <init>():18:18 -> <init>
+    1:2:java.util.List collectDependencies():67:68 -> collectDependencies
+    1:1:java.lang.String convertBrIdToString(int):61:61 -> convertBrIdToString
+    1:5:androidx.databinding.ViewDataBinding getDataBinder(androidx.databinding.DataBindingComponent,android.view.View,int):23:27 -> getDataBinder
+    6:13:androidx.databinding.ViewDataBinding getDataBinder(androidx.databinding.DataBindingComponent,android.view.View[],int):35:42 -> getDataBinder
+    1:2:int getLayoutId(java.lang.String):55:56 -> getLayoutId
+in.sunfox.spandanecg.spandansdk.DataBinderMapperImpl$InnerBrLookup -> in.sunfox.spandanecg.spandansdk.DataBinderMapperImpl$a:
+    android.util.SparseArray sKeys -> a
+    1:4:void <clinit>():73:76 -> <clinit>
+in.sunfox.spandanecg.spandansdk.DataBinderMapperImpl$InnerLayoutIdLookup -> in.sunfox.spandanecg.spandansdk.DataBinderMapperImpl$b:
+    java.util.HashMap sKeys -> a
+    1:1:void <clinit>():81:81 -> <clinit>
+in.sunfox.spandanecg.spandansdk.DataBindingTriggerClass -> in.sunfox.spandanecg.spandansdk.DataBindingTriggerClass:
+    1:1:void <init>():4:4 -> <init>
+in.sunfox.spandanecg.spandansdk.LeadTwoConclusion -> in.sunfox.spandanecg.spandansdk.LeadTwoConclusion:
+# {"id":"sourceFile","fileName":"LeadTwoConclusion.kt"}
+    boolean baselineWandering -> e
+    boolean powerLineInterference -> f
+    java.lang.String detection -> a
+    java.lang.String qrsType -> c
+    java.lang.String ecgType -> b
+    java.lang.String pWaveType -> d
+    1:1:void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,boolean):12:12 -> <init>
+    2:7:void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,boolean):6:11 -> <init>
+    1:1:boolean getBaselineWandering():10:10 -> getBaselineWandering
+    1:1:java.lang.String getDetection():6:6 -> getDetection
+    1:1:java.lang.String getEcgType():7:7 -> getEcgType
+    1:1:java.lang.String getPWaveType():9:9 -> getPWaveType
+    1:1:boolean getPowerLineInterference():11:11 -> getPowerLineInterference
+    1:1:java.lang.String getQrsType():8:8 -> getQrsType
+in.sunfox.spandanecg.spandansdk.OnReportGenerationStateListener -> in.sunfox.spandanecg.spandansdk.OnReportGenerationStateListener:
+# {"id":"sourceFile","fileName":"SpandanSdk.kt"}
+in.sunfox.spandanecg.spandansdk.Risk -> in.sunfox.spandanecg.spandansdk.Risk:
+# {"id":"sourceFile","fileName":"Risk.kt"}
+    in.sunfox.spandanecg.spandansdk.Risk[] $VALUES -> a
+    1:4:void <clinit>():4:7 -> <clinit>
+    5:5:in.sunfox.spandanecg.spandansdk.Risk[] $values():0:0 -> <clinit>
+    5:5:void <clinit>():7 -> <clinit>
+    6:6:void <clinit>():7:7 -> <clinit>
+    1:1:void <init>(java.lang.String,int):3:3 -> <init>
+in.sunfox.spandanecg.spandansdk.SpandanSdk -> in.sunfox.spandanecg.spandansdk.SpandanSdk:
+# {"id":"sourceFile","fileName":"SpandanSdk.kt"}
+    in.sunfox.spandanecg.spandansdk.conclusion.EcgReport report -> b
+    in.sunfox.spandanecg.spandansdk.collection.EcgTest ecgTestInstance -> d
+    in.sunfox.spandanecg.spandansdk.connection.OnDeviceConnectionStateChangeListener onDeviceConnectionStateChangeListener -> a
+    java.io.InputStream inputStream -> c
+    in.sunfox.spandanecg.spandansdk.SpandanSdk INSTANCE -> e
+    1:1:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport access$getReport$p(in.sunfox.spandanecg.spandansdk.SpandanSdk):21:21 -> <init>
+    1:1:void <init>():21 -> <init>
+    1:1:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport access$getReport$p(in.sunfox.spandanecg.spandansdk.SpandanSdk):21:21 -> access$getEcgTestInstance$p
+    1:1:in.sunfox.spandanecg.spandansdk.collection.EcgTest access$getEcgTestInstance$p(in.sunfox.spandanecg.spandansdk.SpandanSdk):21 -> access$getEcgTestInstance$p
+    1:1:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport access$getReport$p(in.sunfox.spandanecg.spandansdk.SpandanSdk):21:21 -> access$getINSTANCE$cp
+    1:1:in.sunfox.spandanecg.spandansdk.SpandanSdk access$getINSTANCE$cp():21 -> access$getINSTANCE$cp
+    1:1:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport access$getReport$p(in.sunfox.spandanecg.spandansdk.SpandanSdk):21:21 -> access$getReport$p
+    1:1:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport access$getReport$p(in.sunfox.spandanecg.spandansdk.SpandanSdk):21:21 -> access$setINSTANCE$cp
+    1:1:void access$setINSTANCE$cp(in.sunfox.spandanecg.spandansdk.SpandanSdk):21 -> access$setINSTANCE$cp
+    1:1:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport access$getReport$p(in.sunfox.spandanecg.spandansdk.SpandanSdk):21:21 -> access$setReport$p
+    1:1:void access$setReport$p(in.sunfox.spandanecg.spandansdk.SpandanSdk,in.sunfox.spandanecg.spandansdk.conclusion.EcgReport):21 -> access$setReport$p
+    1:2:void bind(android.content.Context):50:51 -> bind
+    1:1:in.sunfox.spandanecg.spandansdk.collection.EcgTest createTest(in.sunfox.spandanecg.spandansdk.enums.EcgTestType,in.sunfox.spandanecg.spandansdk.collection.EcgTestCallback):57:57 -> createTest
+    2:2:in.sunfox.spandanecg.spandansdk.collection.EcgTest createTest(in.sunfox.spandanecg.spandansdk.enums.EcgTestType,in.sunfox.spandanecg.spandansdk.collection.EcgTestCallback):56:56 -> createTest
+    1:1:void generateReport(int,java.util.HashMap,in.sunfox.spandanecg.spandansdk.OnReportGenerationStateListener):139:139 -> generateReport
+    2:2:void generateReport(int,java.util.HashMap,in.sunfox.spandanecg.spandansdk.OnReportGenerationStateListener):105:105 -> generateReport
+    1:1:void onDeviceConnected():68:68 -> onDeviceConnected
+    1:3:void onDeviceDisconnected():62:64 -> onDeviceDisconnected
+    1:1:void onDeviceVerified():82:82 -> onDeviceVerified
+    1:1:void onReceiveData(java.lang.String):77:77 -> onReceiveData
+    1:1:void onUsbPermissionDenied():90:90 -> onUsbPermissionDenied
+    1:1:void onVerificationTimeout():86:86 -> onVerificationTimeout
+    1:1:void setOnDeviceConnectionStateChangedListener(in.sunfox.spandanecg.spandansdk.connection.OnDeviceConnectionStateChangeListener):46:46 -> setOnDeviceConnectionStateChangedListener
+    1:2:void unbind(android.content.Context):97:98 -> unbind
+in.sunfox.spandanecg.spandansdk.SpandanSdk$Companion -> in.sunfox.spandanecg.spandansdk.SpandanSdk$Companion:
+# {"id":"sourceFile","fileName":"SpandanSdk.kt"}
+    1:1:void <init>():28:28 -> <init>
+    1:4:in.sunfox.spandanecg.spandansdk.SpandanSdk getInstance():33:36 -> getInstance
+in.sunfox.spandanecg.spandansdk.SpandanSdk$generateReport$$inlined$CoroutineExceptionHandler$1 -> in.sunfox.spandanecg.spandansdk.SpandanSdk$generateReport$$inlined$CoroutineExceptionHandler$1:
+# {"id":"sourceFile","fileName":"CoroutineExceptionHandler.kt"}
+    in.sunfox.spandanecg.spandansdk.OnReportGenerationStateListener $reportGenerationStatusListener$inlined -> a
+    1:1:void <init>(kotlinx.coroutines.CoroutineExceptionHandler$Key,in.sunfox.spandanecg.spandansdk.OnReportGenerationStateListener):49:49 -> <init>
+    1:1:void handleException(kotlin.coroutines.CoroutineContext,java.lang.Throwable):111:111 -> handleException
+in.sunfox.spandanecg.spandansdk.SpandanSdk$generateReport$1 -> in.sunfox.spandanecg.spandansdk.SpandanSdk$a:
+# {"id":"sourceFile","fileName":"SpandanSdk.kt"}
+    in.sunfox.spandanecg.spandansdk.SpandanSdk this$0 -> c
+    in.sunfox.spandanecg.spandansdk.OnReportGenerationStateListener $reportGenerationStatusListener -> b
+    int $userAge -> e
+    java.util.HashMap $ecgData -> d
+    int label -> a
+    1:1:java.lang.Object invoke(kotlinx.coroutines.CoroutineScope,kotlin.coroutines.Continuation):0:0 -> invoke
+    1:1:java.lang.Object invoke(java.lang.Object,java.lang.Object):0 -> invoke
+    1:16:java.lang.Object invokeSuspend(java.lang.Object):105:105 -> invokeSuspend
+    17:30:java.lang.Object invokeSuspend(java.lang.Object):106:119 -> invokeSuspend
+in.sunfox.spandanecg.spandansdk.SpandanSdk$generateReport$1$1 -> in.sunfox.spandanecg.spandansdk.SpandanSdk$a$a:
+# {"id":"sourceFile","fileName":"SpandanSdk.kt"}
+    in.sunfox.spandanecg.spandansdk.SpandanSdk this$0 -> d
+    in.sunfox.spandanecg.spandansdk.OnReportGenerationStateListener $reportGenerationStatusListener -> c
+    java.lang.Object L$0 -> b
+    int $userAge -> f
+    java.util.HashMap $ecgData -> e
+    int label -> a
+    1:1:java.lang.Object invoke(kotlinx.coroutines.CoroutineScope,kotlin.coroutines.Continuation):0:0 -> invoke
+    1:1:java.lang.Object invoke(java.lang.Object,java.lang.Object):0 -> invoke
+    1:14:java.lang.Object invokeSuspend(java.lang.Object):106:106 -> invokeSuspend
+    15:26:java.lang.Object invokeSuspend(java.lang.Object):107:118 -> invokeSuspend
+in.sunfox.spandanecg.spandansdk.SpandanSdk$generateReport$1$1$reportGenerationTask$1 -> in.sunfox.spandanecg.spandansdk.SpandanSdk$a$a$a:
+# {"id":"sourceFile","fileName":"SpandanSdk.kt"}
+    in.sunfox.spandanecg.spandansdk.SpandanSdk this$0 -> a
+    java.util.HashMap $ecgData -> b
+    int $userAge -> c
+    1:1:java.lang.Object invoke(kotlinx.coroutines.CoroutineScope,kotlin.coroutines.Continuation):0:0 -> invoke
+    1:1:java.lang.Object invoke(java.lang.Object,java.lang.Object):0 -> invoke
+    1:9:java.lang.Object invokeSuspend(java.lang.Object):107:115 -> invokeSuspend
+    10:10:java.lang.Object invokeSuspend(java.lang.Object):110:110 -> invokeSuspend
+in.sunfox.spandanecg.spandansdk.TwelveLeadConclusion -> in.sunfox.spandanecg.spandansdk.TwelveLeadConclusion:
+# {"id":"sourceFile","fileName":"TwelveLeadConclusion.kt"}
+    java.lang.String detection -> a
+    java.lang.String recommendation -> c
+    java.lang.String ecgType -> b
+    in.sunfox.spandanecg.spandansdk.Risk risk -> e
+    java.lang.String anomalies -> d
+    1:1:void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,in.sunfox.spandanecg.spandansdk.Risk):11:11 -> <init>
+    2:6:void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,in.sunfox.spandanecg.spandansdk.Risk):6:10 -> <init>
+    1:1:java.lang.String getAnomalies():9:9 -> getAnomalies
+    1:1:java.lang.String getDetection():6:6 -> getDetection
+    1:1:java.lang.String getEcgType():7:7 -> getEcgType
+    1:1:java.lang.String getRecommendation():8:8 -> getRecommendation
+    1:1:in.sunfox.spandanecg.spandansdk.Risk getRisk():10:10 -> getRisk
+in.sunfox.spandanecg.spandansdk.collection.EcgTest -> in.sunfox.spandanecg.spandansdk.collection.EcgTest:
+# {"id":"sourceFile","fileName":"EcgTest.kt"}
+    in.sunfox.spandanecg.spandansdk.collection.EcgTest$countDownTimer$1 countDownTimer -> g
+    long testDuration -> f
+    in.sunfox.spandanecg.spandansdk.enums.EcgTestType ecgTestType -> b
+    boolean isTestInProgress -> e
+    java.io.InputStream inputStream -> a
+    java.util.EnumMap ecgData -> i
+    in.sunfox.spandanecg.spandansdk.enums.EcgPosition currentSelectedEcgPosition -> h
+    in.sunfox.spandanecg.spandansdk.collection.EcgTestCallback ecgTestCallback -> c
+    java.lang.String TAG -> d
+    1:54:void <init>(java.io.InputStream,in.sunfox.spandanecg.spandansdk.enums.EcgTestType,in.sunfox.spandanecg.spandansdk.collection.EcgTestCallback):25:78 -> <init>
+    1:30:boolean checkTwelveLeadTestCompletion():164:193 -> a
+    31:48:in.sunfox.healthcare.commons.java.ecg_processor.data.EcgData getEcgDataFromHashMap(java.util.HashMap):267:284 -> a
+    49:49:in.sunfox.healthcare.commons.java.ecg_processor.data.EcgData getEcgDataFromHashMap(java.util.HashMap):272:272 -> a
+    50:50:in.sunfox.healthcare.commons.java.ecg_processor.data.EcgData getEcgDataFromHashMap(java.util.HashMap):269:269 -> a
+    1:1:in.sunfox.spandanecg.spandansdk.enums.EcgPosition access$getCurrentSelectedEcgPosition$p(in.sunfox.spandanecg.spandansdk.collection.EcgTest):25:25 -> access$getCurrentSelectedEcgPosition$p
+    1:1:java.util.EnumMap access$getEcgData$p(in.sunfox.spandanecg.spandansdk.collection.EcgTest):25:25 -> access$getEcgData$p
+    1:1:in.sunfox.spandanecg.spandansdk.collection.EcgTestCallback access$getEcgTestCallback$p(in.sunfox.spandanecg.spandansdk.collection.EcgTest):25:25 -> access$getEcgTestCallback$p
+    1:1:long access$getTestDuration$p(in.sunfox.spandanecg.spandansdk.collection.EcgTest):25:25 -> access$getTestDuration$p
+    1:1:void access$setTestInProgress$p(in.sunfox.spandanecg.spandansdk.collection.EcgTest,boolean):25:25 -> access$setTestInProgress$p
+    1:5:void cancel():137:141 -> cancel
+    1:2:in.sunfox.spandanecg.spandansdk.connection.SpandanEngineException checkForDataValidation():254:255 -> checkForDataValidation
+    3:4:boolean checkForLeadII():248:249 -> checkForDataValidation
+    3:4:in.sunfox.spandanecg.spandansdk.connection.SpandanEngineException checkForDataValidation():255 -> checkForDataValidation
+    5:9:in.sunfox.spandanecg.spandansdk.connection.SpandanEngineException checkForDataValidation():256:260 -> checkForDataValidation
+    10:11:in.sunfox.spandanecg.spandansdk.connection.SpandanEngineException checkForDataValidation(java.util.HashMap):306:307 -> checkForDataValidation
+    12:12:boolean checkForLeadII(in.sunfox.healthcare.commons.java.ecg_processor.data.LeadTwoData):244:244 -> checkForDataValidation
+    12:12:in.sunfox.spandanecg.spandansdk.connection.SpandanEngineException checkForDataValidation(java.util.HashMap):307 -> checkForDataValidation
+    13:13:in.sunfox.spandanecg.spandansdk.connection.SpandanEngineException checkForDataValidation(java.util.HashMap):308:308 -> checkForDataValidation
+    1:1:java.util.ArrayList getEcgDataOfSelectedLead():116:116 -> getEcgDataOfSelectedLead
+    1:1:in.sunfox.spandanecg.spandansdk.enums.EcgTestType getEcgTestType():545:545 -> getEcgTestType
+    1:1:boolean isTestValid():119:119 -> isTestValid
+    2:2:java.util.ArrayList getEcgData(in.sunfox.spandanecg.spandansdk.enums.EcgPosition):112:112 -> isTestValid
+    2:2:boolean isTestValid():119 -> isTestValid
+    3:3:boolean isTestValid():119:119 -> isTestValid
+    1:4:void onDeviceDisconnected():129:132 -> onDeviceDisconnected
+    1:1:void onReceiveData(java.lang.String):123:123 -> onReceiveData
+    2:6:void setEcgData(in.sunfox.spandanecg.spandansdk.enums.EcgPosition,double):104:108 -> onReceiveData
+    2:6:void onReceiveData(java.lang.String):123 -> onReceiveData
+    7:7:void onReceiveData(java.lang.String):124:124 -> onReceiveData
+    1:4:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport generateReport(int,java.util.HashMap):324:327 -> proceedReport
+    1:4:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport proceedReport(int,java.util.HashMap):320 -> proceedReport
+    5:11:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport openTwelveLeadReport(int,in.sunfox.healthcare.commons.java.ecg_processor.data.EcgData):457:463 -> proceedReport
+    5:11:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport generateReport(int,java.util.HashMap):327 -> proceedReport
+    5:11:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport proceedReport(int,java.util.HashMap):320 -> proceedReport
+    12:24:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport openTwelveLeadReport(int,in.sunfox.healthcare.commons.java.ecg_processor.data.EcgData):461:473 -> proceedReport
+    12:24:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport generateReport(int,java.util.HashMap):327 -> proceedReport
+    12:24:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport proceedReport(int,java.util.HashMap):320 -> proceedReport
+    25:32:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport openTwelveLeadReport(int,in.sunfox.healthcare.commons.java.ecg_processor.data.EcgData):472:479 -> proceedReport
+    25:32:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport generateReport(int,java.util.HashMap):327 -> proceedReport
+    25:32:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport proceedReport(int,java.util.HashMap):320 -> proceedReport
+    33:45:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport openTwelveLeadReport(int,in.sunfox.healthcare.commons.java.ecg_processor.data.EcgData):477:489 -> proceedReport
+    33:45:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport generateReport(int,java.util.HashMap):327 -> proceedReport
+    33:45:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport proceedReport(int,java.util.HashMap):320 -> proceedReport
+    46:46:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport openTwelveLeadReport(int,in.sunfox.healthcare.commons.java.ecg_processor.data.EcgData):488:488 -> proceedReport
+    46:46:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport generateReport(int,java.util.HashMap):327 -> proceedReport
+    46:46:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport proceedReport(int,java.util.HashMap):320 -> proceedReport
+    47:47:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport openTwelveLeadReport(int,in.sunfox.healthcare.commons.java.ecg_processor.data.EcgData):487:487 -> proceedReport
+    47:47:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport generateReport(int,java.util.HashMap):327 -> proceedReport
+    47:47:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport proceedReport(int,java.util.HashMap):320 -> proceedReport
+    48:57:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport openTwelveLeadReport(int,in.sunfox.healthcare.commons.java.ecg_processor.data.EcgData):486:495 -> proceedReport
+    48:57:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport generateReport(int,java.util.HashMap):327 -> proceedReport
+    48:57:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport proceedReport(int,java.util.HashMap):320 -> proceedReport
+    58:101:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport openTwelveLeadReport(int,in.sunfox.healthcare.commons.java.ecg_processor.data.EcgData):491:534 -> proceedReport
+    58:101:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport generateReport(int,java.util.HashMap):327 -> proceedReport
+    58:101:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport proceedReport(int,java.util.HashMap):320 -> proceedReport
+    102:141:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport openTwelveLeadReport(int,in.sunfox.healthcare.commons.java.ecg_processor.data.EcgData):500:539 -> proceedReport
+    102:141:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport generateReport(int,java.util.HashMap):327 -> proceedReport
+    102:141:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport proceedReport(int,java.util.HashMap):320 -> proceedReport
+    142:142:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport openTwelveLeadReport(int,in.sunfox.healthcare.commons.java.ecg_processor.data.EcgData):537:537 -> proceedReport
+    142:142:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport generateReport(int,java.util.HashMap):327 -> proceedReport
+    142:142:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport proceedReport(int,java.util.HashMap):320 -> proceedReport
+    143:143:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport generateReport(int,java.util.HashMap):327:327 -> proceedReport
+    143:143:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport proceedReport(int,java.util.HashMap):320 -> proceedReport
+    144:144:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport generateReport(int,java.util.HashMap):325:325 -> proceedReport
+    144:144:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport proceedReport(int,java.util.HashMap):320 -> proceedReport
+    145:147:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport openLeadIIReport(in.sunfox.healthcare.commons.java.ecg_processor.data.LeadTwoData):335:335 -> proceedReport
+    145:147:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport generateReport(int,java.util.HashMap):325 -> proceedReport
+    145:147:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport proceedReport(int,java.util.HashMap):320 -> proceedReport
+    149:185:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport openLeadIIReport(in.sunfox.healthcare.commons.java.ecg_processor.data.LeadTwoData):337:373 -> proceedReport
+    149:185:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport generateReport(int,java.util.HashMap):325 -> proceedReport
+    149:185:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport proceedReport(int,java.util.HashMap):320 -> proceedReport
+    186:230:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport openLeadIIReport(in.sunfox.healthcare.commons.java.ecg_processor.data.LeadTwoData):339:383 -> proceedReport
+    186:230:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport generateReport(int,java.util.HashMap):325 -> proceedReport
+    186:230:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport proceedReport(int,java.util.HashMap):320 -> proceedReport
+    231:241:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport openLeadIIReport(in.sunfox.healthcare.commons.java.ecg_processor.data.LeadTwoData):377:387 -> proceedReport
+    231:241:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport generateReport(int,java.util.HashMap):325 -> proceedReport
+    231:241:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport proceedReport(int,java.util.HashMap):320 -> proceedReport
+    242:242:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport openLeadIIReport(in.sunfox.healthcare.commons.java.ecg_processor.data.LeadTwoData):385:385 -> proceedReport
+    242:242:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport generateReport(int,java.util.HashMap):325 -> proceedReport
+    242:242:in.sunfox.spandanecg.spandansdk.conclusion.EcgReport proceedReport(int,java.util.HashMap):320 -> proceedReport
+    1:19:void start(in.sunfox.spandanecg.spandansdk.enums.EcgPosition):81:99 -> start
+    20:20:void start(in.sunfox.spandanecg.spandansdk.enums.EcgPosition):90:90 -> start
+in.sunfox.spandanecg.spandansdk.collection.EcgTest$Companion -> in.sunfox.spandanecg.spandansdk.collection.EcgTest$Companion:
+# {"id":"sourceFile","fileName":"EcgTest.kt"}
+    1:1:void <init>():34:34 -> <init>
+in.sunfox.spandanecg.spandansdk.collection.EcgTest$WhenMappings -> in.sunfox.spandanecg.spandansdk.collection.EcgTest$WhenMappings:
+# {"id":"sourceFile","fileName":"EcgTest.kt"}
+in.sunfox.spandanecg.spandansdk.collection.EcgTest$countDownTimer$1 -> in.sunfox.spandanecg.spandansdk.collection.EcgTest$countDownTimer$1:
+# {"id":"sourceFile","fileName":"EcgTest.kt"}
+    in.sunfox.spandanecg.spandansdk.collection.EcgTest this$0 -> a
+    1:1:void <init>(in.sunfox.spandanecg.spandansdk.collection.EcgTest,long):46:46 -> <init>
+    1:11:void onFinish():59:69 -> onFinish
+    12:18:void onFinish():67:73 -> onFinish
+    1:4:void onTick(long):51:54 -> onTick
+    5:5:void onTick(long):52:52 -> onTick
+in.sunfox.spandanecg.spandansdk.collection.EcgTestCallback -> in.sunfox.spandanecg.spandansdk.collection.EcgTestCallback:
+# {"id":"sourceFile","fileName":"EcgTestCallback.kt"}
+in.sunfox.spandanecg.spandansdk.collection.OnPositionRecordingCompleteListener -> in.sunfox.spandanecg.spandansdk.collection.OnPositionRecordingCompleteListener:
+# {"id":"sourceFile","fileName":"OnPositionRecordingCompleteListener.kt"}
+in.sunfox.spandanecg.spandansdk.conclusion.EcgReport -> in.sunfox.spandanecg.spandansdk.conclusion.EcgReport:
+# {"id":"sourceFile","fileName":"EcgReport.kt"}
+    in.sunfox.spandanecg.spandansdk.enums.EcgTestType reportType -> a
+    in.sunfox.spandanecg.spandansdk.Characteristics ecgCharacteristics -> c
+    in.sunfox.spandanecg.spandansdk.Conclusion conclusion -> d
+    java.lang.String timeStamp -> b
+    1:8:void <init>(in.sunfox.spandanecg.spandansdk.enums.EcgTestType,java.lang.String,in.sunfox.spandanecg.spandansdk.Characteristics,in.sunfox.spandanecg.spandansdk.Conclusion):10:17 -> <init>
+    1:1:in.sunfox.spandanecg.spandansdk.Conclusion getConclusion():17:17 -> getConclusion
+    1:1:in.sunfox.spandanecg.spandansdk.Characteristics getEcgCharacteristics():16:16 -> getEcgCharacteristics
+    1:1:in.sunfox.spandanecg.spandansdk.enums.EcgTestType getReportType():11:11 -> getReportType
+    1:1:java.lang.String getTimeStamp():12:12 -> getTimeStamp
+    1:1:void setConclusion(in.sunfox.spandanecg.spandansdk.Conclusion):17:17 -> setConclusion
+    1:1:void setTimeStamp(java.lang.String):12:12 -> setTimeStamp
+in.sunfox.spandanecg.spandansdk.conclusion.ReportUser -> in.sunfox.spandanecg.spandansdk.conclusion.ReportUser:
+# {"id":"sourceFile","fileName":"ReportUser.kt"}
+    java.lang.String phoneNumber -> g
+    java.lang.Integer age -> f
+    java.lang.String firstName -> a
+    java.lang.String height -> c
+    java.lang.String lastName -> b
+    java.lang.String gender -> e
+    java.lang.String weight -> d
+    1:8:void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String):6:13 -> <init>
+    9:15:void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,int,kotlin.jvm.internal.DefaultConstructorMarker):7:13 -> <init>
+    16:16:void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,int,kotlin.jvm.internal.DefaultConstructorMarker):6:6 -> <init>
+    1:1:java.lang.Integer getAge():12:12 -> getAge
+    1:1:java.lang.String getFirstName():7:7 -> getFirstName
+    1:1:java.lang.String getGender():11:11 -> getGender
+    1:1:java.lang.String getHeight():9:9 -> getHeight
+    1:1:java.lang.String getLastName():8:8 -> getLastName
+    1:1:java.lang.String getPhoneNumber():13:13 -> getPhoneNumber
+    1:1:java.lang.String getWeight():10:10 -> getWeight
+in.sunfox.spandanecg.spandansdk.connection.OnDeviceConnectionStateChangeListener -> in.sunfox.spandanecg.spandansdk.connection.OnDeviceConnectionStateChangeListener:
+# {"id":"sourceFile","fileName":"OnDeviceConnectionStateChangeListener.kt"}
+in.sunfox.spandanecg.spandansdk.connection.SpandanEngineException -> in.sunfox.spandanecg.spandansdk.connection.SpandanEngineException:
+# {"id":"sourceFile","fileName":"SpandanEngineException.kt"}
+    1:1:void <init>(java.lang.String):5:5 -> <init>
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper:
+# {"id":"sourceFile","fileName":"ConstantHelper.kt"}
+    1:1:void <init>():6:6 -> <init>
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$DeviceRegistration -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$DeviceRegistration:
+# {"id":"sourceFile","fileName":"ConstantHelper.kt"}
+    1:1:void <init>():146:146 -> <init>
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$Devices -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$Devices:
+# {"id":"sourceFile","fileName":"ConstantHelper.kt"}
+    1:1:void <init>():139:139 -> <init>
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$EcgPositions -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$EcgPositions:
+# {"id":"sourceFile","fileName":"ConstantHelper.kt"}
+    1:1:void <init>():153:153 -> <init>
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$FTP -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$FTP:
+# {"id":"sourceFile","fileName":"ConstantHelper.kt"}
+    1:1:void <init>():27:27 -> <init>
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$FeaturesLimits -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$FeaturesLimits:
+# {"id":"sourceFile","fileName":"ConstantHelper.kt"}
+    1:1:void <init>():77:77 -> <init>
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$Files -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$Files:
+# {"id":"sourceFile","fileName":"ConstantHelper.kt"}
+    java.lang.String PATH_SPANDAN_DATA_FOLDER -> g
+    java.lang.String PATH_SPANDAN_FOLDER -> f
+    java.lang.String PATH_SPANDAN_HRV_DATA_FOLDER -> i
+    java.lang.String PATH_SPANDAN_ARRHYTHMIA_DATA_FOLDER -> h
+    java.lang.String PATH_SPANDAN_DATA_LOGS_FOLDER -> k
+    java.lang.String PATH_SPANDAN_ECG_DATA_FOLDER -> j
+    java.lang.String PATH_SPANDAN_PUSH_TO_SERVER_DATA -> l
+    java.lang.String ZIFFY_ECG_DIR_PATH -> a
+    java.lang.String PATH_PDF_ECG_TEMPLATE -> c
+    java.lang.String ZIFFY_ROOT_DIR_PATH -> b
+    java.lang.String PATH_PDF_ARRHYTHMIA_TEMPLATE -> e
+    java.lang.String PATH_PDF_HRV_TEMPLATE -> d
+    1:3:void <clinit>():180:180 -> <clinit>
+    4:4:void <clinit>():181:181 -> <clinit>
+    5:10:void <clinit>():180:185 -> <clinit>
+    11:14:void <clinit>():184:187 -> <clinit>
+    15:18:void <clinit>():186:189 -> <clinit>
+    19:26:void <clinit>():188:195 -> <clinit>
+    27:36:void <clinit>():194:203 -> <clinit>
+    1:1:void <init>():171:171 -> <init>
+    1:1:java.lang.String getPATH_PDF_ARRHYTHMIA_TEMPLATE():188:188 -> getPATH_PDF_ARRHYTHMIA_TEMPLATE
+    1:1:java.lang.String getPATH_PDF_ECG_TEMPLATE():184:184 -> getPATH_PDF_ECG_TEMPLATE
+    1:1:java.lang.String getPATH_PDF_HRV_TEMPLATE():186:186 -> getPATH_PDF_HRV_TEMPLATE
+    1:1:java.lang.String getPATH_SPANDAN_ARRHYTHMIA_DATA_FOLDER():194:194 -> getPATH_SPANDAN_ARRHYTHMIA_DATA_FOLDER
+    1:1:java.lang.String getPATH_SPANDAN_DATA_FOLDER():192:192 -> getPATH_SPANDAN_DATA_FOLDER
+    1:1:java.lang.String getPATH_SPANDAN_DATA_LOGS_FOLDER():200:200 -> getPATH_SPANDAN_DATA_LOGS_FOLDER
+    1:1:java.lang.String getPATH_SPANDAN_ECG_DATA_FOLDER():198:198 -> getPATH_SPANDAN_ECG_DATA_FOLDER
+    1:1:java.lang.String getPATH_SPANDAN_FOLDER():190:190 -> getPATH_SPANDAN_FOLDER
+    1:1:java.lang.String getPATH_SPANDAN_HRV_DATA_FOLDER():196:196 -> getPATH_SPANDAN_HRV_DATA_FOLDER
+    1:1:java.lang.String getPATH_SPANDAN_PUSH_TO_SERVER_DATA():202:202 -> getPATH_SPANDAN_PUSH_TO_SERVER_DATA
+    1:1:java.lang.String getZIFFY_ECG_DIR_PATH():180:180 -> getZIFFY_ECG_DIR_PATH
+    1:1:java.lang.String getZIFFY_ROOT_DIR_PATH():182:182 -> getZIFFY_ROOT_DIR_PATH
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$FragmentTags -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$FragmentTags:
+# {"id":"sourceFile","fileName":"ConstantHelper.kt"}
+    1:1:void <init>():207:207 -> <init>
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$Fragments -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$Fragments:
+# {"id":"sourceFile","fileName":"ConstantHelper.kt"}
+    1:1:void <init>():97:97 -> <init>
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$Intents -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$Intents:
+# {"id":"sourceFile","fileName":"ConstantHelper.kt"}
+    1:1:void <init>():130:130 -> <init>
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$Languages -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$Languages:
+# {"id":"sourceFile","fileName":"ConstantHelper.kt"}
+    1:1:void <init>():90:90 -> <init>
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$Links -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$Links:
+# {"id":"sourceFile","fileName":"ConstantHelper.kt"}
+    1:1:void <init>():108:108 -> <init>
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$NotificationConstants -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$NotificationConstants:
+# {"id":"sourceFile","fileName":"ConstantHelper.kt"}
+    1:1:void <init>():33:33 -> <init>
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$RecordType -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$RecordType:
+# {"id":"sourceFile","fileName":"ConstantHelper.kt"}
+    1:1:void <init>():69:69 -> <init>
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$SharedPreferences -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$SharedPreferences:
+# {"id":"sourceFile","fileName":"ConstantHelper.kt"}
+    1:1:void <init>():116:116 -> <init>
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$UnitsSuffix -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.ConstantHelper$UnitsSuffix:
+# {"id":"sourceFile","fileName":"ConstantHelper.kt"}
+    1:1:void <init>():163:163 -> <init>
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.SearchDeviceThread -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.SearchDeviceThread:
+# {"id":"sourceFile","fileName":"SearchDeviceThread.kt"}
+    boolean deviceFound -> b
+    android.hardware.usb.UsbManager usbManager -> a
+    1:1:void <init>(android.hardware.usb.UsbManager):6:6 -> <init>
+    1:25:void run():10:34 -> run
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.SerialDeviceDataReceiveThread -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.SerialDeviceDataReceiveThread:
+# {"id":"sourceFile","fileName":"SerialDeviceDataReceiveThread.kt"}
+    int i -> d
+    java.lang.String data -> c
+    java.lang.String validData -> b
+    com.felhr.usbserial.UsbSerialDevice serialPort -> a
+    1:2:void <init>(com.felhr.usbserial.UsbSerialDevice):10:11 -> <init>
+    1:24:void run$lambda-0(in.sunfox.spandanecg.spandansdk.connection.usb_connection.SerialDeviceDataReceiveThread,byte[]):26:49 -> a
+    25:30:void run$lambda-0(in.sunfox.spandanecg.spandansdk.connection.usb_connection.SerialDeviceDataReceiveThread,byte[]):48:53 -> a
+    1:1:java.lang.String getData():12:12 -> getData
+    1:1:int getI():13:13 -> getI
+    1:49:void run():15:63 -> run
+    1:1:void setData(java.lang.String):12:12 -> setData
+    1:1:void setI(int):13:13 -> setI
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.UsbConnectionContract -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.UsbConnectionContract:
+# {"id":"sourceFile","fileName":"UsbConnectionContract.kt"}
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.UsbConnectionHelper -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.UsbConnectionHelper:
+# {"id":"sourceFile","fileName":"UsbConnectionHelper.kt"}
+    android.content.BroadcastReceiver broadcastReceiver -> i
+    android.hardware.usb.UsbDevice usbDevice -> e
+    boolean isDeviceVerified -> f
+    androidx.appcompat.app.AppCompatActivity activity -> c
+    in.sunfox.spandanecg.spandansdk.connection.usb_connection.UsbConnectionContract usbConnectionContract -> b
+    in.sunfox.spandanecg.spandansdk.connection.usb_connection.SerialDeviceDataReceiveThread serialDeviceDataReceiveThread -> g
+    com.felhr.usbserial.UsbSerialDevice serialPort -> d
+    in.sunfox.spandanecg.spandansdk.connection.usb_connection.SearchDeviceThread searchDeviceThread -> h
+    android.hardware.usb.UsbManager usbManager -> a
+    1:1:void <clinit>():33:33 -> <clinit>
+    1:1:void <init>():19:19 -> <init>
+    1:9:void setUp():129:137 -> a
+    10:15:void setUp():135:140 -> a
+    16:26:void setUp():139:149 -> a
+    1:1:in.sunfox.spandanecg.spandansdk.connection.usb_connection.SearchDeviceThread access$getSearchDeviceThread$p():19:19 -> access$getSearchDeviceThread$p
+    1:1:in.sunfox.spandanecg.spandansdk.connection.usb_connection.SerialDeviceDataReceiveThread access$getSerialDeviceDataReceiveThread$p():19:19 -> access$getSerialDeviceDataReceiveThread$p
+    1:1:in.sunfox.spandanecg.spandansdk.connection.usb_connection.UsbConnectionContract access$getUsbConnectionContract$p():19:19 -> access$getUsbConnectionContract$p
+    1:1:android.hardware.usb.UsbManager access$getUsbManager$p():19:19 -> access$getUsbManager$p
+    1:1:void access$setDeviceVerified$p(boolean):19:19 -> access$setDeviceVerified$p
+    1:1:void access$setSearchDeviceThread$p(in.sunfox.spandanecg.spandansdk.connection.usb_connection.SearchDeviceThread):19:19 -> access$setSearchDeviceThread$p
+    1:1:void access$setSerialDeviceDataReceiveThread$p(in.sunfox.spandanecg.spandansdk.connection.usb_connection.SerialDeviceDataReceiveThread):19:19 -> access$setSerialDeviceDataReceiveThread$p
+    1:1:void access$setUp(in.sunfox.spandanecg.spandansdk.connection.usb_connection.UsbConnectionHelper):19:19 -> access$setUp
+    1:2:void setUp$lambda-0():145:146 -> b
+    1:2:void bind(in.sunfox.spandanecg.spandansdk.connection.usb_connection.UsbConnectionContract,android.content.Context):103:104 -> bind
+    3:6:android.content.IntentFilter getIntentFilter():121:124 -> bind
+    3:6:void bind(in.sunfox.spandanecg.spandansdk.connection.usb_connection.UsbConnectionContract,android.content.Context):105 -> bind
+    7:12:void bind(in.sunfox.spandanecg.spandansdk.connection.usb_connection.UsbConnectionContract,android.content.Context):103:108 -> bind
+    13:18:void bind(in.sunfox.spandanecg.spandansdk.connection.usb_connection.UsbConnectionContract,android.content.Context):107:112 -> bind
+    1:2:void setUp$lambda-1():150:151 -> c
+    1:1:com.felhr.usbserial.UsbSerialDevice getSerialPort():75:75 -> getSerialPort
+    1:1:android.hardware.usb.UsbDevice getUsbDevice():87:87 -> getUsbDevice
+    1:1:boolean isDeviceConnected():79:79 -> isDeviceConnected
+    1:8:void onReceiveRawData(java.lang.String):157:164 -> onReceiveRawData
+    1:10:void onSearchComplete():194:203 -> onSearchComplete
+    1:1:void setDeviceConnected(boolean):83:83 -> setDeviceConnected
+    1:10:void setUsbDevice(android.hardware.usb.UsbDevice):169:178 -> setUsbDevice
+    11:19:void setUsbDevice(android.hardware.usb.UsbDevice):174:182 -> setUsbDevice
+    20:20:void setUsbDevice(android.hardware.usb.UsbDevice):181:181 -> setUsbDevice
+    1:4:void startTransmission():91:94 -> startTransmission
+    1:2:void stopTransmission():98:99 -> stopTransmission
+    1:1:void unBind(android.content.Context):117:117 -> unBind
+in.sunfox.spandanecg.spandansdk.connection.usb_connection.UsbConnectionHelper$broadcastReceiver$1 -> in.sunfox.spandanecg.spandansdk.connection.usb_connection.UsbConnectionHelper$broadcastReceiver$1:
+# {"id":"sourceFile","fileName":"UsbConnectionHelper.kt"}
+    1:1:void <init>():33:33 -> <init>
+    1:30:void onReceive(android.content.Context,android.content.Intent):36:65 -> onReceive
+    31:48:void onReceive(android.content.Context,android.content.Intent):38:38 -> onReceive
+    50:53:void onReceive(android.content.Context,android.content.Intent):40:43 -> onReceive
+in.sunfox.spandanecg.spandansdk.enums.DeviceConnectionState -> in.sunfox.spandanecg.spandansdk.enums.DeviceConnectionState:
+# {"id":"sourceFile","fileName":"DeviceConnectionState.kt"}
+    in.sunfox.spandanecg.spandansdk.enums.DeviceConnectionState[] $VALUES -> a
+    1:5:void <clinit>():4:8 -> <clinit>
+    6:6:in.sunfox.spandanecg.spandansdk.enums.DeviceConnectionState[] $values():0:0 -> <clinit>
+    6:6:void <clinit>():8 -> <clinit>
+    7:7:void <clinit>():8:8 -> <clinit>
+    1:1:void <init>(java.lang.String,int):3:3 -> <init>
+in.sunfox.spandanecg.spandansdk.enums.EcgPosition -> in.sunfox.spandanecg.spandansdk.enums.EcgPosition:
+# {"id":"sourceFile","fileName":"EcgPosition.kt"}
+    in.sunfox.spandanecg.spandansdk.enums.EcgPosition[] $VALUES -> a
+    1:8:void <clinit>():4:11 -> <clinit>
+    9:9:in.sunfox.spandanecg.spandansdk.enums.EcgPosition[] $values():0:0 -> <clinit>
+    9:9:void <clinit>():11 -> <clinit>
+    10:10:void <clinit>():11:11 -> <clinit>
+    1:1:void <init>(java.lang.String,int):3:3 -> <init>
+in.sunfox.spandanecg.spandansdk.enums.EcgTestType -> in.sunfox.spandanecg.spandansdk.enums.EcgTestType:
+# {"id":"sourceFile","fileName":"EcgTestType.kt"}
+    in.sunfox.spandanecg.spandansdk.enums.EcgTestType[] $VALUES -> a
+    1:2:void <clinit>():5:6 -> <clinit>
+    3:3:in.sunfox.spandanecg.spandansdk.enums.EcgTestType[] $values():0:0 -> <clinit>
+    3:3:void <clinit>():6 -> <clinit>
+    4:4:void <clinit>():6:6 -> <clinit>
+    1:1:void <init>(java.lang.String,int):3:3 -> <init>
+in.sunfox.spandanecg.spandansdk.enums.SpandanException -> in.sunfox.spandanecg.spandansdk.enums.SpandanException:
+# {"id":"sourceFile","fileName":"SpandanException.kt"}
+    in.sunfox.spandanecg.spandansdk.enums.SpandanException[] $VALUES -> a
+    1:4:void <clinit>():4:7 -> <clinit>
+    5:5:in.sunfox.spandanecg.spandansdk.enums.SpandanException[] $values():0:0 -> <clinit>
+    5:5:void <clinit>():7 -> <clinit>
+    6:6:void <clinit>():7:7 -> <clinit>
+    1:1:void <init>(java.lang.String,int):3:3 -> <init>

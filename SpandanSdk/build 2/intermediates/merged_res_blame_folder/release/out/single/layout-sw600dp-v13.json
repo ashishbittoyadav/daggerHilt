@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "in.sunfox.spandanecg.spandansdk.SpandanSdk-merged_res-30:/layout-sw600dp-v13/mtrl_layout_snackbar.xml",
+        "source": "in.sunfox.spandanecg.spandansdk.SpandanSdk-material-1.6.1-23:/layout-sw600dp-v13/mtrl_layout_snackbar.xml"
+    },
+    {
+        "merged": "in.sunfox.spandanecg.spandansdk.SpandanSdk-merged_res-30:/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "in.sunfox.spandanecg.spandansdk.SpandanSdk-material-1.6.1-23:/layout-sw600dp-v13/design_layout_snackbar.xml"
+    }
+]

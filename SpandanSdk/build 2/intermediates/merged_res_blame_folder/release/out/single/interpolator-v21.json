@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "in.sunfox.spandanecg.spandansdk.SpandanSdk-merged_res-30:/interpolator-v21/mtrl_linear_out_slow_in.xml",
+        "source": "in.sunfox.spandanecg.spandansdk.SpandanSdk-material-1.6.1-23:/interpolator-v21/mtrl_linear_out_slow_in.xml"
+    },
+    {
+        "merged": "in.sunfox.spandanecg.spandansdk.SpandanSdk-merged_res-30:/interpolator-v21/mtrl_fast_out_linear_in.xml",
+        "source": "in.sunfox.spandanecg.spandansdk.SpandanSdk-material-1.6.1-23:/interpolator-v21/mtrl_fast_out_linear_in.xml"
+    },
+    {
+        "merged": "in.sunfox.spandanecg.spandansdk.SpandanSdk-merged_res-30:/interpolator-v21/mtrl_fast_out_slow_in.xml",
+        "source": "in.sunfox.spandanecg.spandansdk.SpandanSdk-material-1.6.1-23:/interpolator-v21/mtrl_fast_out_slow_in.xml"
+    }
+]

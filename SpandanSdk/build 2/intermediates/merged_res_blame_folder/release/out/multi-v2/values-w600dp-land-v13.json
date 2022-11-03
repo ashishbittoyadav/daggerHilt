@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "in.sunfox.spandanecg.spandansdk.SpandanSdk-mergeReleaseResources-28:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/sunfox2/.gradle/caches/transforms-3/f0af7e28b55a2053235f277e5f803493/transformed/material-1.6.1/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "54",
+                        "endOffsets": "105"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "in.sunfox.spandanecg.spandansdk.SpandanSdk-merged_res-30:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/sunfox2/.gradle/caches/transforms-3/f0af7e28b55a2053235f277e5f803493/transformed/material-1.6.1/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "54",
+                        "endOffsets": "105"
+                    }
+                }
+            ]
+        }
+    ]
+}
