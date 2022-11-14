@@ -35,10 +35,14 @@ class MainViewModel @Inject constructor(private val mainRepository: MainReposito
     val resStateFlow : StateFlow<ResourceUiState?> = _resStateFlow
 
     private fun getUsersFromServer()  = viewModelScope.launch {
+        Log.d(TAG, "getUsersFromServer: ")
         _res.postValue(Resource.loading(null))
         mainRepository.getUsers().let { userItem ->
+            Log.d(TAG, "getUsersFromServer: ")
+            Log.d(TAG, "getUsersFromServer: ${userItem.isSuccessful}")
             if (userItem.isSuccessful){
                 userItem.body()?.forEach {
+                    Log.d(TAG, "getUsersFromServer: ${it.name}")
                     this.launch(IO) {
                         saveUserInDB(it)
                     }
