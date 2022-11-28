@@ -16,7 +16,7 @@ jobs:
             - run:
                 name: "build project"
                 command:
-                  echo "hello world"
+                  echo "hello world!!"
   custom_job:
     steps:
       - checkout
