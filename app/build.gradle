@@ -80,4 +80,7 @@ dependencies {
 
     implementation "androidx.room:room-runtime:2.4.3"
     kapt "androidx.room:room-compiler:2.4.3"
+
+
+    implementation 'in.sunfox.healthcare.commons.android.spandan-sdk:spandan-sdk:1.0.0-beta17'
 }
